@@ -107,7 +107,7 @@ in
       echo "configuring networking..." >&2
 
       ${optionalString (cfg.computerName != null) ''
-        scutil --set ComputerName '${cfg.computerName}'
+        scutil --set ComputerName "${cfg.computerName}"
       ''}
       ${optionalString (cfg.hostName != null) ''
         scutil --set HostName '${cfg.hostName}'
